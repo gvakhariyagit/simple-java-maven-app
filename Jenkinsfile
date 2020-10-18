@@ -22,7 +22,7 @@ pipeline {
         }
         stage('Create Docker Image') {
             steps {
-                sh 'docker build . -t sampleapp:${VERSION}'
+          //      sh 'docker build . -t sampleapp:${VERSION}'
                 sh 'docker build . -t sampleapp:1.0.0'
             }
         }
