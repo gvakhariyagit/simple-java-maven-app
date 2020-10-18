@@ -3,8 +3,8 @@ pipeline {
     
     environment {
         GIT_VER = getSCMVer()
-        IMAGE = readMavenPom().getArtifactId()
-        VERSION = readMavenPom().getVersion()
+ //       IMAGE = readMavenPom().getArtifactId()
+ //       VERSION = readMavenPom().getVersion()
     }
     stages {
         stage('Github Pull') {
