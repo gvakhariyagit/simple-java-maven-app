@@ -3,8 +3,8 @@ pipeline {
     
     environment {
         GIT_VER = getSCMVer()
-        IMAGE = readMavenPom().getArtifactId()
-        VERSION = readMavenPom().getVersion()
+     //   IMAGE = readMavenPom().getArtifactId()
+     //   VERSION = readMavenPom().getVersion()
     }
     stages {
         stage('Github Pull') {
@@ -23,6 +23,7 @@ pipeline {
         stage('Create Docker Image') {
             steps {
                 sh 'docker build . -t sampleapp:${VERSION}'
+                sh 'docker build . -t sampleapp:1.0.0'
             }
         }
     }
